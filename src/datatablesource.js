@@ -1,14 +1,14 @@
 export const userColumns = [
-    { field: "id", headerName: "ID", width: 70 },
+    { field: "id", headerName: "ID", width: 180 },
     {
-      field: "user",
-      headerName: "User",
-      width: 230,
+      field: "usuario",
+      headerName: "Usuario",
+      width: 180,
       renderCell: (params) => {
         return (
           <div className="cellWithImg">
             <img className="cellImg" src={params.row.img} alt="avatar" />
-            {params.row.username}
+            {params.row.usuario}
           </div>
         );
       },
@@ -19,9 +19,14 @@ export const userColumns = [
         width: 230,
     },
     {
-        field:"edad", 
-        headerName:"Edad", 
-        width: 100,
+      field:"direccion", 
+      headerName:"Dirección", 
+      width: 230,
+    },
+    {
+        field:"rol", 
+        headerName:"rol", 
+        width: 140,
     },
     {
         field:"status", 
@@ -35,88 +40,167 @@ export const userColumns = [
             )
         }
     },
+    {
+      field:"creado_en", 
+      headerName:"Creado_en", 
+      width: 140,
+    },
+    {
+      field:"actualizado_en", 
+      headerName:"Actualizado_en", 
+      width: 140,
+    },
   ];
 
-//temporary data
-export const userRows = [
+
+  export const productColumns = [
+    { field: "id", headerName: "ID", width: 180 },
     {
-      id: 1,
-      username: "Snow",
-      img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      status: "activo",
-      correo: "1snow@gmail.com",
-      edad: 35,
+      field: "titulo",
+      headerName: "Titulo",
+      width: 180,
+      renderCell: (params) => {
+        return (
+          <div className="cellWithImg">
+            <img className="cellImg" src={params.row.img} alt="avatar" />
+            {params.row.usuario}
+          </div>
+        );
+      },
     },
     {
-      id: 2,
-      username: "Jamie Lannister",
-      img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      correo: "2snow@gmail.com",
-      status: "pasivo",
-      edad: 42,
+      field:"descripcion", 
+      headerName:"Descripcion", 
+      width: 230,
     },
     {
-      id: 3,
-      username: "Lannister",
-      img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      correo: "3snow@gmail.com",
-      status: "pendiente",
-      edad: 45,
+        field:"precio", 
+        headerName:"Precio", 
+        width: 140,
     },
     {
-      id: 4,
-      username: "Stark",
-      img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      correo: "4snow@gmail.com",
-      status: "activo",
-      edad: 16,
+        field:"status", 
+        headerName:"Status", 
+        width: 160,
+        renderCell:(params)=>{
+            return (
+                <div className={`cellWithStatus ${params.row.status}`}>
+                    {params.row.status}
+                </div>
+            )
+        }
     },
     {
-      id: 5,
-      username: "Targaryen",
-      img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      correo: "5snow@gmail.com",
-      status: "pasivo",
-      edad: 22,
+      field:"creado_en", 
+      headerName:"Creado_en", 
+      width: 140,
     },
     {
-      id: 6,
-      username: "Melisandre",
-      img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      correo: "6snow@gmail.com",
-      status: "activo",
-      edad: 15,
+      field:"actualizado_en", 
+      headerName:"Actualizado_en", 
+      width: 140,
+    },
+  ];
+
+  export const brandsColumns = [
+    { field: "id", headerName: "ID", width: 180 },
+    {
+      field: "titulo",
+      headerName: "Titulo",
+      width: 180,
+      renderCell: (params) => {
+        return (
+          <div className="cellWithImg">
+            <img className="cellImg" src={params.row.img} alt="avatar" />
+            {params.row.usuario}
+          </div>
+        );
+      },
     },
     {
-      id: 7,
-      username: "Clifford",
-      img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      correo: "7snow@gmail.com",
-      status: "pasivo",
-      edad: 44,
+        field:"descripcion", 
+        headerName:"Descripcion", 
+        width: 230,
     },
     {
-      id: 8,
-      username: "Frances",
-      img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      correo: "8snow@gmail.com",
-      status: "activo",
-      edad: 36,
+      field:"url_logo", 
+      headerName:"Url Logo", 
+      width: 230,
     },
     {
-      id: 9,
-      username: "Roxie",
-      img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      correo: "snow@gmail.com",
-      status: "pendiente",
-      edad: 65,
+        field:"status", 
+        headerName:"Status", 
+        width: 160,
+        renderCell:(params)=>{
+            return (
+                <div className={`cellWithStatus ${params.row.status}`}>
+                    {params.row.status}
+                </div>
+            )
+        }
     },
     {
-      id: 10,
-      username: "Roxie",
-      img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      correo: "snow@gmail.com",
-      status: "activo",
-      edad: 65,
+      field:"creado_en", 
+      headerName:"Creado_en", 
+      width: 140,
+    },
+    {
+      field:"actualizado_en", 
+      headerName:"Actualizado_en", 
+      width: 140,
+    },
+  ];
+
+  export const product_variantsColumns = [
+    { field: "id", headerName: "ID", width: 180 },
+    {
+      field: "titulo",
+      headerName: "Titulo",
+      width: 180,
+      renderCell: (params) => {
+        return (
+          <div className="cellWithImg">
+            <img className="cellImg" src={params.row.img} alt="avatar" />
+            {params.row.usuario}
+          </div>
+        );
+      },
+    },
+    {
+      field:"descripcion", 
+      headerName:"Descripcion", 
+      width: 230,
+    },
+    {
+        field:"color", 
+        headerName:"Color", 
+        width: 140,
+    },
+    {
+      field:"colorRGB", 
+      headerName:"ColorRGB", 
+      width: 80,
+    },
+    {
+        field:"status", 
+        headerName:"Status", 
+        width: 160,
+        renderCell:(params)=>{
+            return (
+                <div className={`cellWithStatus ${params.row.status}`}>
+                    {params.row.status}
+                </div>
+            )
+        }
+    },
+    {
+      field:"creado_en", 
+      headerName:"Creado_en", 
+      width: 140,
+    },
+    {
+      field:"actualizado_en", 
+      headerName:"Actualizado_en", 
+      width: 140,
     },
   ];

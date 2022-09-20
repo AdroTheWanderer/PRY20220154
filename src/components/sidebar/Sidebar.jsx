@@ -14,7 +14,7 @@ import ExitToAppOutlinedIcon from '@mui/icons-material/ExitToAppOutlined';
 import {Link} from "react-router-dom"
 import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
-import { NavyModeContext } from "../../context/navyModeContext";
+/*import { NavyModeContext } from "../../context/navyModeContext";*/
 
 const Sidebar = () => {
 

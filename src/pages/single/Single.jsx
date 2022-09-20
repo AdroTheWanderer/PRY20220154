@@ -38,6 +38,10 @@ const Single = () => {
                   <span className="itemKey">País:</span>
                   <span className="itemValue">Peru</span>
                 </div>
+                <div className="detailItem">
+                  <span className="itemKey">Rol:</span>
+                  <span className="itemValue">Cliente</span>
+                </div>
               </div>
             </div>
           </div>
