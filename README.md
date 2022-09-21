@@ -1,7 +1,3 @@
-# PRY20220154
-Mi aporte como recurso de Software Factory para la Aplicación Móvil de Probador de Zapatillas Deportivas con Realidad Aumentada para Tiendas Comerciales de Lima.
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
